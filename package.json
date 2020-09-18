@@ -1,0 +1,20 @@
+{
+  "name": "@deskeen/web-builder-inline-sass",
+  "version": "0.1.0",
+  "description": "Web Builder Module - Inline SASS files",
+  "author": "Morgan Schmiedt",
+  "license": "MIT",
+  "repository": "https://github.com/deskeen/web-builder-inline-sass",
+  "keywords": [
+    "build",
+    "website",
+    "node.js",
+    "inline",
+    "css",
+    "sass"
+  ],
+  "main": "src/module.js",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
