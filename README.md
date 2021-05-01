@@ -2,7 +2,7 @@
 
 This module allows the [@deskeen/web-builder](https://github.com/deskeen/web-builder) engine to inline CSS/SASS files.
 
-It uses the [node-sass](https://github.com/sass/node-sass) under the hood to parse and minify the text.
+It uses [dart-sass](https://github.com/sass/dart-sass) under the hood to parse and minify the text.
 
 
 ## Install
@@ -33,7 +33,7 @@ await builder.build({
           // the sass files included in the tags
         ],
         sassOptions: {
-          // See https://github.com/sass/node-sass
+          // See https://github.com/sass/dart-sass
           // for a complete list of options
         },
         // Minify output

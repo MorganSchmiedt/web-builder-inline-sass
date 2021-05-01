@@ -1,7 +1,7 @@
 'use strict'
 /* eslint-env node, es6 */
 
-const sass = require('node-sass')
+const sass = require('sass')
 
 const TAG_NAME = 'inlineSASS'
 
@@ -70,7 +70,7 @@ module.exports = async(fileMap, opt, lib) => {
             return
           }
 
-          resolve(result.css.toString())
+          resolve(result.css.toString().trim())
         }))
 
       depMap.set(name, content)
@@ -84,7 +84,12 @@ module.exports = async(fileMap, opt, lib) => {
       for (const tag of tagList) {
         const tagName = getTag(TAG_NAME, tag)
         const depValue = depMap.get(tag)
-        const value = `<style>${depValue}</style>`
+        // For some reasons, minified css that start with "*"
+        // do not work. Add a useless selector as a workaround
+        const padding = depValue.startsWith('*')
+          ? 'a{}'
+          : ''
+        const value = `<style>${padding}${depValue}</style>`
 
         content = content.replace(new RegExp(tagName, 'g'), value)
 

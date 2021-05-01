@@ -15,6 +15,6 @@
   ],
   "main": "src/module.js",
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "sass": "^1.32.11"
   }
 }
