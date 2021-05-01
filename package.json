@@ -1,6 +1,6 @@
 {
   "name": "@deskeen/web-builder-inline-sass",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Web Builder Module - Inline SASS files",
   "author": "Morgan Schmiedt",
   "license": "MIT",
